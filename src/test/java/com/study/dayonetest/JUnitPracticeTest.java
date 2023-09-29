@@ -1,16 +1,16 @@
 package com.study.dayonetest;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.*;
+
 
 import java.util.List;
 
-
+@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 public class JUnitPracticeTest {
 
     @Test
-    public void assertEqualsTest() {
+    @DisplayName("Assert Equals 메서드 테스트")
+    public void assert_equals_Test() {
         String expect = "Something";
         String actual = "Something";
 
@@ -18,6 +18,7 @@ public class JUnitPracticeTest {
     }
 
     @Test
+    @DisplayName("Assert Not Equals 메서드 테스트")
     public void assertNotEqualsTest() {
         String expect = "Something";
         String actual = "Hello";
@@ -26,6 +27,7 @@ public class JUnitPracticeTest {
     }
 
     @Test
+    @DisplayName("Assert True 메서드 테스트")
     public void assertTrueTest() {
         Integer a = 10;
         Integer b = 10;
@@ -34,6 +36,7 @@ public class JUnitPracticeTest {
     }
 
     @Test
+    @DisplayName("Assert False 메서드 테스트")
     public void assertFalseTest() {
         Integer a = 10;
         Integer b = 20;
@@ -42,6 +45,7 @@ public class JUnitPracticeTest {
     }
 
     @Test
+    @DisplayName("Assert Throws 메서드 테스트")
     public void assertThrowsTest() {
 
         Assertions.assertThrows(RuntimeException.class, () -> {
@@ -50,6 +54,7 @@ public class JUnitPracticeTest {
     }
 
     @Test
+    @DisplayName("Assert Not Null 메서드 테스트")
     public void assertNotNullTest() {
 
         String value = "HELLO";
@@ -58,6 +63,7 @@ public class JUnitPracticeTest {
     }
 
     @Test
+    @DisplayName("Assert Null 메서드 테스트")
     public void assertNullTest() {
 
         String value = null;
@@ -66,6 +72,7 @@ public class JUnitPracticeTest {
     }
 
     @Test
+    @DisplayName("Assert Iterable Equals 메서드 테스트")
     public void assertIterableEqualsTest() {
 
         List<Integer> list1 = List.of(1,2);
@@ -76,6 +83,7 @@ public class JUnitPracticeTest {
     }
 
     @Test
+    @DisplayName("Assert All 메서드 테스트")
     public void assertAllTest() {
         String expect = "Something";
         String actual = "Something";
