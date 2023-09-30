@@ -36,7 +36,6 @@ public class StudentScoreServiceMockTest {
         );
     }
 
-
     @Test
     @DisplayName("첫번째 Mock 테스트")
     public void firstSaveScoreMockTest() {
@@ -56,7 +55,6 @@ public class StudentScoreServiceMockTest {
                 givenMathScore
         );
     }
-
     @Test
     @DisplayName("성적 저장 로직 검증 / 60점 이상인 경우")
     public void saveScoreMockTest() {
@@ -146,8 +144,6 @@ public class StudentScoreServiceMockTest {
         Mockito.when(studentPassRepository.findAll()).thenReturn(List.of(
                 expectStudent1,expectStudent2,notExpectStudent3
         ));
-
-
 
         List<ExamPassStudentResponse> expectResponses = List.of(expectStudent1,expectStudent2)
                 .stream()
